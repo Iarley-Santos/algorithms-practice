@@ -1,0 +1,9 @@
+a.pop(i) - remove o elemento da posição i
+a.append(12) - adiciona no final da lista
+a.insert(12, i) -  adiciona 12 no indice i
+a.remove(12) -  remove o valor 12 da lista
+a.extend(b) - adiciona toda lista b no final da lista a
+a.index(12) - procura o indice em qual o elemento esta
+a.count(12) - conta quantas vezes o elemento aparece
+a.sort(reverse=False) - ordena a lista(reverse=False para crescente e reserve=True para decrescente)
+a.clear() -  remove todos os elementos
