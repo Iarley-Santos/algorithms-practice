@@ -7,28 +7,23 @@ import re
 import sys
 
 #
-# Complete the 'compareTriplets' function below.
+# Complete the 'diagonalDifference' function below.
 #
-# The function is expected to return an INTEGER_ARRAY.
-# The function accepts following parameters:
-#  1. INTEGER_ARRAY a
-#  2. INTEGER_ARRAY b
+# The function is expected to return an INTEGER.
+# The function accepts 2D_INTEGER_ARRAY arr as parameter.
 #
 
-def compareTriplets(a, b):
-    # Write your code here
-    ret = [0, 0]
-    for i in range(len(a)):
-        if a[i] > b[i]:
-            ret[0] = ret[0] + 1
-        elif a[i] < b[i]:
-            ret[1] = ret[1] + 1
-    return ret
-
+def diagonalDifference(arr):
+    lenght = len(arr)
+    main_diagonal = 0
+    second_diagonal = 0
+    for i in range(0, lenght):
+        main_diagonal = main_diagonal + arr[i][i]
+        second_diagonal = second_diagonal + arr[i][lenght-1-i]
+    return abs(main_diagonal - second_diagonal)
+        
 if __name__ == '__main__':
-    a = [1, 2, 3]
-    b = [3, 2, 1]
+    
+    arr = [[11, 2, 4], [4, 5, 6], [10, 8, -12]]
 
-    result = compareTriplets(a, b)
-
-    print(result)
+    print(diagonalDifference(arr))
